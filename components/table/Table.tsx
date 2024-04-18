@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table"
 import { FileType } from "@/typings"
 import { Button } from "../ui/button"
-import { Trash2Icon, TrashIcon } from "lucide-react"
+import { TrashIcon } from "lucide-react"
 import { useAppStore } from "@/store/store"
 import { DeleteModal } from "../DeleteModal"
 

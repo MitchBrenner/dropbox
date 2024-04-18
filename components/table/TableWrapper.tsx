@@ -48,7 +48,7 @@ function TableWrapper( {skeletonFiles }: { skeletonFiles: FileType[] }) {
         <div className='border-b h-12' />
         {
           skeletonFiles.map((file) => (
-            <div className="flex items-center space-x-4 p-5 w-full">
+            <div key={file.id} className="flex items-center space-x-4 p-5 w-full">
               <Skeleton className='h-12 w-12'/>
               <Skeleton className='h-12 w-full'/>
             </div>

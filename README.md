@@ -36,3 +36,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - it creates a user collection where each user has a files collection that contains all the files uploaded by the user
 - it also uses firebase storage to store the files and then updates the user's files collection with the file's ref in the storage
 - use [react-firebase-hooks](https://www.npmjs.com/package/react-firebase-hooks) to query and sort db. You can also use it to listen to changes in the database
+
+## Deployment
+- [Vercel](https://vercel.com/) for deployment
