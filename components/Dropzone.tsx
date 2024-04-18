@@ -6,6 +6,7 @@ import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/fi
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { useState } from 'react';
 import DropzoneComonent from 'react-dropzone'
+import toast from 'react-hot-toast';
 
 function Dropzone() {
 
@@ -35,6 +36,7 @@ function Dropzone() {
         if (!user) return; // this prevents users from uploading without being logged in
 
         setLoading(true);
+        const toastId = toast.loading("Uploading file...");
 
         // add doc to this location in db : users/user12345/files
         const docRef = await addDoc(collection(db, "users", user.id, "files"), {
@@ -57,7 +59,7 @@ function Dropzone() {
                     downloadURL: downloadURL,
             });
         });
-
+        toast.success("File uploaded successfully!", {id: toastId});
         setLoading(false);
     }
 

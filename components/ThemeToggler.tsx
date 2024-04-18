@@ -11,9 +11,26 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import toast from "react-hot-toast"
 
 export function ThemeToggler() {
   const { setTheme } = useTheme()
+
+  const handleThemeChange = (theme: string) => {
+    setTheme(theme);
+    if (theme === "dark") {
+        toast('Hello Darkness!',
+            {
+              icon: '🌙',
+              style: {
+                borderRadius: '10px',
+                background: '#0160fe',
+                color: '#fff',
+              },
+            }
+        );
+    }
+  }
 
   return (
     <DropdownMenu>
@@ -28,7 +45,7 @@ export function ThemeToggler() {
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => handleThemeChange('dark')}>
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>

@@ -17,7 +17,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Shadcn
 - use [pretty bytes](https://www.npmjs.com/package/pretty-bytes) to convert bytes to human readable format
 - used [react-file-icon](https://www.npmjs.com/package/react-file-icon) to display file icons
+- used [react-hot-toast](https://react-hot-toast.com/) for toast notifications
 
+### Global State
+- use [zustand](https://github.com/pmndrs/zustand)
 
 ## Authentication
 
